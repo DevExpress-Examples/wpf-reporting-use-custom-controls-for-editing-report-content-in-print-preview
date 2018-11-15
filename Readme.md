@@ -1,3 +1,12 @@
+<!-- default file list -->
+*Files to look at*:
+
+* **[App.xaml](./CS/WpfApplication1/App.xaml)**
+* [MainViewModel.cs](./CS/WpfApplication1/MainViewModel.cs) (VB: [MainViewModel.vb](./VB/WpfApplication1/MainViewModel.vb))
+* [MainWindow.xaml](./CS/WpfApplication1/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/WpfApplication1/MainWindow.xaml))
+* [ReportViewModel.cs](./CS/WpfApplication1/ReportViewModel.cs) (VB: [ReportViewModel.vb](./VB/WpfApplication1/ReportViewModel.vb))
+* [XtraReport1.cs](./CS/WpfApplication1/XtraReport1.cs) (VB: [XtraReport1.vb](./VB/WpfApplication1/XtraReport1.vb))
+<!-- default file list end -->
 # How to use custom controls for editing report content in Print Preview
 
 
