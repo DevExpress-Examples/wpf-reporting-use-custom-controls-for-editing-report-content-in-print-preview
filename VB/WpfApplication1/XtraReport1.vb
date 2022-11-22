@@ -13,7 +13,7 @@ Namespace WpfApplication1
 			InitializeComponent()
 		End Sub
 
-		Private Sub XtraReport1_BeforePrint(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintEventArgs) Handles Me.BeforePrint
+		Private Sub XtraReport1_BeforePrint(ByVal sender As Object, ByVal e As CancelEventArgs) Handles Me.BeforePrint
 			AddHandler PrintingSystem.EditingFieldChanged, AddressOf PrintingSystem_EditingFieldChanged
 		End Sub
 

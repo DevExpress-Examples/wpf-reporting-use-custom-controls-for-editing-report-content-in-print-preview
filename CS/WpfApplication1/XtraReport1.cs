@@ -11,7 +11,7 @@ namespace WpfApplication1 {
             InitializeComponent();
         }
 
-        private void XtraReport1_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e) {
+        private void XtraReport1_BeforePrint(object sender, CancelEventArgs e) {
             PrintingSystem.EditingFieldChanged += new EventHandler<DevExpress.XtraPrinting.EditingFieldEventArgs>(PrintingSystem_EditingFieldChanged);
         }
 

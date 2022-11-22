@@ -60,7 +60,7 @@
 			' xrLabel5
 			' 
 			Me.xrLabel5.Dpi = 100F
-			Me.xrLabel5.Font = New System.Drawing.Font("Tahoma", 10F)
+			Me.xrLabel5.Font = New DevExpress.Drawing.DXFont("Tahoma", 10F)
 			Me.xrLabel5.LocationFloat = New DevExpress.Utils.PointFloat(240.625F, 10.00001F)
 			Me.xrLabel5.Name = "xrLabel5"
 			Me.xrLabel5.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 5, 5, 100F)
@@ -92,7 +92,7 @@
 			' xrLabel6
 			' 
 			Me.xrLabel6.Dpi = 100F
-			Me.xrLabel6.Font = New System.Drawing.Font("Tahoma", 10F)
+			Me.xrLabel6.Font = New DevExpress.Drawing.DXFont("Tahoma", 10F)
 			Me.xrLabel6.LocationFloat = New DevExpress.Utils.PointFloat(461.4583F, 10.00001F)
 			Me.xrLabel6.Name = "xrLabel6"
 			Me.xrLabel6.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 5, 5, 100F)
@@ -104,7 +104,7 @@
 			' xrLabel4
 			' 
 			Me.xrLabel4.Dpi = 100F
-			Me.xrLabel4.Font = New System.Drawing.Font("Tahoma", 10F)
+			Me.xrLabel4.Font = New DevExpress.Drawing.DXFont("Tahoma", 10F)
 			Me.xrLabel4.LocationFloat = New DevExpress.Utils.PointFloat(10.00001F, 10.00001F)
 			Me.xrLabel4.Name = "xrLabel4"
 			Me.xrLabel4.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 5, 5, 100F)
@@ -142,7 +142,7 @@
 			' xrLabel7
 			' 
 			Me.xrLabel7.Dpi = 100F
-			Me.xrLabel7.Font = New System.Drawing.Font("Tahoma", 9.75F)
+			Me.xrLabel7.Font = New DevExpress.Drawing.DXFont("Tahoma", 9.75F)
 			Me.xrLabel7.LocationFloat = New DevExpress.Utils.PointFloat(10.00001F, 10.00001F)
 			Me.xrLabel7.Multiline = True
 			Me.xrLabel7.Name = "xrLabel7"
