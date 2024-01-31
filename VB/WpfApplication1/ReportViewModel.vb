@@ -1,65 +1,72 @@
-﻿Imports System
+Imports System
 Imports System.Collections.Generic
 Imports System.Linq
 Imports DevExpress.Mvvm
 Imports DevExpress.XtraReports.UI
 
 Namespace WpfApplication1
-    Public Class ReportViewModel
-        Inherits BindableBase
 
-        Private privateReport As XtraReport
-        Public Property Report() As XtraReport
+    Public Class ReportViewModel
+        Inherits DevExpress.Mvvm.BindableBase
+
+        Private _Report As XtraReport
+
+        Public Property Report As XtraReport
             Get
-                Return privateReport
+                Return _Report
             End Get
+
             Private Set(ByVal value As XtraReport)
-                privateReport = value
+                _Report = value
             End Set
         End Property
-        Public Sub New(ByVal report As XtraReport)
+
+        Public Sub New(ByVal report As DevExpress.XtraReports.UI.XtraReport)
             Me.Report = report
         End Sub
     End Class
 
     Public Class PreviewViewModel
-        Inherits ReportViewModel
+        Inherits WpfApplication1.ReportViewModel
 
-        Public Sub New(ByVal report As XtraReport)
+        Private _ComboBoxItemsSource As IEnumerable(Of String), _DateTimeMin As DateTime, _DateTimeMax As DateTime
+
+        Public Sub New(ByVal report As DevExpress.XtraReports.UI.XtraReport)
             MyBase.New(report)
             ' Fill the itemsSource of a ComboBox editor.
-            ComboBoxItemsSource = Enumerable.Range(1, 20).Select(Function(x) String.Format("Item {0}", x))
-
+            Me.ComboBoxItemsSource = System.Linq.Enumerable.Range(1, 20).[Select](Function(x) String.Format("Item {0}", x))
             ' Set the minimum and maximum values for a DateTime editor.
-            DateTimeMin = Date.Now.AddMonths(-2)
-            DateTimeMax = Date.Now.AddMonths(2)
+            Me.DateTimeMin = System.DateTime.Now.AddMonths(-2)
+            Me.DateTimeMax = System.DateTime.Now.AddMonths(2)
         End Sub
 
-        Private privateComboBoxItemsSource As IEnumerable(Of String)
-        Public Property ComboBoxItemsSource() As IEnumerable(Of String)
+        Public Property ComboBoxItemsSource As IEnumerable(Of String)
             Get
-                Return privateComboBoxItemsSource
+                Return _ComboBoxItemsSource
             End Get
+
             Private Set(ByVal value As IEnumerable(Of String))
-                privateComboBoxItemsSource = value
+                _ComboBoxItemsSource = value
             End Set
         End Property
-        Private privateDateTimeMin As Date
-        Public Property DateTimeMin() As Date
+
+        Public Property DateTimeMin As DateTime
             Get
-                Return privateDateTimeMin
+                Return _DateTimeMin
             End Get
-            Private Set(ByVal value As Date)
-                privateDateTimeMin = value
+
+            Private Set(ByVal value As DateTime)
+                _DateTimeMin = value
             End Set
         End Property
-        Private privateDateTimeMax As Date
-        Public Property DateTimeMax() As Date
+
+        Public Property DateTimeMax As DateTime
             Get
-                Return privateDateTimeMax
+                Return _DateTimeMax
             End Get
-            Private Set(ByVal value As Date)
-                privateDateTimeMax = value
+
+            Private Set(ByVal value As DateTime)
+                _DateTimeMax = value
             End Set
         End Property
     End Class
