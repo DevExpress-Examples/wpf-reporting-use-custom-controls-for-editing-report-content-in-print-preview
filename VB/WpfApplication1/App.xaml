@@ -1,0 +1,23 @@
+<Application x:Class="WpfApplication1.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WpfApplication1"
+             xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+             xmlns:dxpt="http://schemas.devexpress.com/winfx/2008/xaml/printing/themekeys"
+             xmlns:dxp="http://schemas.devexpress.com/winfx/2008/xaml/printing"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <DataTemplate x:Key="{dxpt:EditingFieldThemeKeyExtension ResourceKey=ComboBoxEditor}">
+            <dxe:ComboBoxEdit ItemsSource="{Binding Path=(dxp:DocumentPreviewControl.ActualViewer).DataContext.ComboBoxItemsSource, RelativeSource={RelativeSource Self}}"
+                          IsTextEditable="False" x:Name="PART_Editor"/>
+        </DataTemplate>
+        <DataTemplate x:Key="{dxpt:EditingFieldThemeKeyExtension ResourceKey=DateEditor}">
+            <dxe:DateEdit MinValue="{Binding Path=(dxp:DocumentPreviewControl.ActualViewer).DataContext.DateTimeMin, RelativeSource={RelativeSource Self}}"
+                      MaxValue="{Binding Path=(dxp:DocumentPreviewControl.ActualViewer).DataContext.DateTimeMax, RelativeSource={RelativeSource Self}}"
+                      MaskUseAsDisplayFormat="True" Mask="MMMM dd, yyyy" ShowWeekNumbers="True" ShowToday="True" Name="PART_Editor" />
+        </DataTemplate>
+        <DataTemplate x:Key="{dxpt:EditingFieldThemeKeyExtension ResourceKey=PhoneNumberEditor}">
+            <dxe:TextEdit x:Name="PART_Editor" MaskType="Simple" Mask="(999)000-00-00" MaskUseAsDisplayFormat="True" EditValue="{Binding Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+        </DataTemplate>
+    </Application.Resources>
+</Application>
